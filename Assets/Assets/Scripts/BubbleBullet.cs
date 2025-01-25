@@ -1,4 +1,5 @@
 using UnityEngine;
+using Assets.Assets.Scripts;
 
 public class BubbleBullet : MonoBehaviour
 {
@@ -13,5 +14,16 @@ public class BubbleBullet : MonoBehaviour
     void FixedUpdate()
     {
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        collision.gameObject.GetComponent<Player>().TakeHit();
+        Die();
+    }
+    
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }
