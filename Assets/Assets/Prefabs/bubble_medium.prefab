@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9029195661770433243}
   - component: {fileID: 468055639899945718}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 9017876380002749711}
   - component: {fileID: -217738938235188277}
   - component: {fileID: 721310406547255054}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bubble_medium
   m_TagString: Untagged
   m_Icon: {fileID: 0}

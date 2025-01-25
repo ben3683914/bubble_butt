@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1369912136737666723, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918974037830279178, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2177728448265705844, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
       propertyPath: m_Radius
       value: 1.59
