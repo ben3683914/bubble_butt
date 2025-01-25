@@ -116,10 +116,10 @@ TextureImporter:
       name: Bubble_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 2
         y: 0
         width: 305
-        height: 330
+        height: 331
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
