@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 70d0b9b299d6e9844897c663aaa612d4
+guid: 525eac122b6c0c241834601a16084f6c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5712959122012955994
-    second: Bubble_0
+      213: 5365373361246081864
+    second: no-outlinebubble_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubble_0
+      name: no-outlinebubble_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 305
-        height: 331
+        width: 515
+        height: 482
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6aa171472fd77b0b0800000000000000
-      internalID: -5712959122012955994
+      spriteID: 8439a6425a2a57a40800000000000000
+      internalID: 5365373361246081864
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bubble_0: -5712959122012955994
+      no-outlinebubble_0: 5365373361246081864
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

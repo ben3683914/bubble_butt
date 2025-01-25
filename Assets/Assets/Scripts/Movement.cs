@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour
         var hit = Physics2D.Raycast(new Vector2(transform.position.x, collider.bounds.min.y -.01f), Vector2.down, .1f);
         if (hit)
         {
-            Debug.Log($"{hit.collider.gameObject.name}:{collider.bounds.ToString()}:{collider.bounds.min.ToString()}");
+            //Debug.Log($"{hit.collider.gameObject.name}:{collider.bounds.ToString()}:{collider.bounds.min.ToString()}");
             isGrounded = true;
         }
         else
