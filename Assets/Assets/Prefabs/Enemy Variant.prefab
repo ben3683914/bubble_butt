@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2177728448265705844, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
+      propertyPath: m_Radius
+      value: 1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672146167090743048, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4160280059966950735, guid: 70d0b9b299d6e9844897c663aaa612d4, type: 3}
     m_RemovedComponents:
     - {fileID: 1196730560178360953, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
     m_RemovedGameObjects: []
@@ -85,4 +93,3 @@ MonoBehaviour:
   player: {fileID: 0}
   tinyBubble: {fileID: 2071848393293025984, guid: e00764e7b9bf6544cbf4de5a3fb2bfbe, type: 3}
   bubbleBullet: {fileID: 5921537086942157964, guid: 2fd1ee685bea9c1438c618d80f60e8de, type: 3}
-  shootInterval: 5
