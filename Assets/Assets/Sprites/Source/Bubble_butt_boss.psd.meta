@@ -5,6 +5,54 @@ TextureImporter:
   - first:
       213: -3559905113656770142
     second: Bubble_butt_boss_0
+  - first:
+      213: 5597285230841557967
+    second: Bubble_butt_boss_1
+  - first:
+      213: -361652718584066381
+    second: Bubble_butt_boss_2
+  - first:
+      213: -8699149839052045902
+    second: Bubble_butt_boss_3
+  - first:
+      213: 6197863940669933911
+    second: Bubble_butt_boss_4
+  - first:
+      213: -7667849718638162882
+    second: Bubble_butt_boss_5
+  - first:
+      213: -8936930746756609288
+    second: Bubble_butt_boss_6
+  - first:
+      213: 3578621787563869409
+    second: Bubble_butt_boss_7
+  - first:
+      213: -3863037914250579870
+    second: Bubble_butt_boss_8
+  - first:
+      213: 1131155081804652682
+    second: Bubble_butt_boss_9
+  - first:
+      213: -5570200244095532486
+    second: Bubble_butt_boss_10
+  - first:
+      213: 7962367880748115955
+    second: Bubble_butt_boss_11
+  - first:
+      213: 3471075753774515981
+    second: Bubble_butt_boss_12
+  - first:
+      213: -4947550445349683264
+    second: Bubble_butt_boss_13
+  - first:
+      213: 1058478173709222804
+    second: Bubble_butt_boss_14
+  - first:
+      213: -6590356516249453188
+    second: Bubble_butt_boss_15
+  - first:
+      213: -5461231765092785776
+    second: Bubble_butt_boss_16
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,6 +144,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -104,9 +165,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 499
-        height: 1269
+        y: 1122
+        width: 23
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,6 +178,358 @@ TextureImporter:
       bones: []
       spriteID: 2a1446a092da89ec0800000000000000
       internalID: -3559905113656770142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 5
+        width: 451
+        height: 1264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc3f9d2034d8dad40800000000000000
+      internalID: 5597285230841557967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_2
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1123
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be0eb0c4c62bfaf0800000000000000
+      internalID: -361652718584066381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_3
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 1139
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1086bbf49664780800000000000000
+      internalID: -8699149839052045902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_4
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1081
+        width: 22
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75985d59a6c330650800000000000000
+      internalID: 6197863940669933911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_5
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 1059
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3c4e719e43569590800000000000000
+      internalID: -7667849718638162882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_6
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 898
+        width: 30
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa4e41f5d4a9f380800000000000000
+      internalID: -8936930746756609288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_7
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 700
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4c7313e81d9a130800000000000000
+      internalID: 3578621787563869409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_8
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 673
+        width: 16
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2607a37fb7bb36ac0800000000000000
+      internalID: -3863037914250579870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_9
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 591
+        width: 23
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8028d4cd8ba2bf00800000000000000
+      internalID: 1131155081804652682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_10
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 177
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3244e2e36ca2b2b0800000000000000
+      internalID: -5570200244095532486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 43
+        width: 22
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7a8fea663008e60800000000000000
+      internalID: 7962367880748115955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_12
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 120
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07833ce10dbb2030800000000000000
+      internalID: 3471075753774515981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_13
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 107
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf3b9c4515c65bb0800000000000000
+      internalID: -4947550445349683264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_14
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 74
+        width: 10
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 493417a7a4870be00800000000000000
+      internalID: 1058478173709222804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_15
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 33
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7d35c96aa95a84a0800000000000000
+      internalID: -6590356516249453188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_butt_boss_16
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091a09df4aec534b0800000000000000
+      internalID: -5461231765092785776
       vertices: []
       indices: 
       edges: []
