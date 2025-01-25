@@ -534,7 +534,24 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bubble_butt_boss_0: -3559905113656770142
+      Bubble_butt_boss_1: 5597285230841557967
+      Bubble_butt_boss_10: -5570200244095532486
+      Bubble_butt_boss_11: 7962367880748115955
+      Bubble_butt_boss_12: 3471075753774515981
+      Bubble_butt_boss_13: -4947550445349683264
+      Bubble_butt_boss_14: 1058478173709222804
+      Bubble_butt_boss_15: -6590356516249453188
+      Bubble_butt_boss_16: -5461231765092785776
+      Bubble_butt_boss_2: -361652718584066381
+      Bubble_butt_boss_3: -8699149839052045902
+      Bubble_butt_boss_4: 6197863940669933911
+      Bubble_butt_boss_5: -7667849718638162882
+      Bubble_butt_boss_6: -8936930746756609288
+      Bubble_butt_boss_7: 3578621787563869409
+      Bubble_butt_boss_8: -3863037914250579870
+      Bubble_butt_boss_9: 1131155081804652682
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

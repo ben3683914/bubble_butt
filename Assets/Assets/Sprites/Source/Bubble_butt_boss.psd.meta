@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bubble_butt_boss_0: -3559905113656770142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
