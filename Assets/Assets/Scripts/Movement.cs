@@ -57,7 +57,7 @@ public class Movement : MonoBehaviour
 
         if (jumping)
         {
-            rigidbody.AddForce(Vector2.up * jumpAmount);
+            rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, jumpAmount * Time.deltaTime);
             jumpTime += Time.deltaTime;
         }
 
