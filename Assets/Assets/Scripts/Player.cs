@@ -84,7 +84,6 @@ namespace Assets.Assets.Scripts
             var upgradeBubbles = hitColliders.Select(x => x.GetComponent<UpgradeBubbles>()).Where(x => x != null && !x.seekPlayer);
             
             foreach (UpgradeBubbles upgradeBubble in upgradeBubbles){
-                Debug.Log(upgradeBubble.name);
                 upgradeBubble.Activate();
             }
         }
@@ -119,7 +118,6 @@ namespace Assets.Assets.Scripts
         {
             if (attackTime > CurrentWeapon.GetComponent<Projectile>().fireRate || shootOnce)
             {
-                Debug.Log("shoot");
                 var clone = Instantiate(CurrentWeapon.gameObject, transform.position, Quaternion.identity);
                 clone.GetComponent<Projectile>().flipped = transform.localScale.x < 0;
                 attackTime = 0;
