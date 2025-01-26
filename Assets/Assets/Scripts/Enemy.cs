@@ -4,35 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject player;
     public GameObject tinyBubble;
     public GameObject bubbleBullet;
-    public float shootIntervalMinimum;
-    public float shootIntervalMaximum;
-
     public int Health;
-    private float shootInterval = 0f;
-    private float shootTimer = 0f;
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        shootInterval = Random.Range(shootIntervalMinimum, shootIntervalMaximum);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        shootTimer += Time.deltaTime;
-        if(shootTimer > shootInterval)
-        {
-            Instantiate(bubbleBullet, transform.position, Quaternion.identity);
-            Debug.Log("shot fired");
-            shootInterval = Random.Range(shootIntervalMinimum, shootIntervalMaximum);
-            shootTimer = 0f;
-        }
-    }
 
     public void TakeHit(int damage)
     {

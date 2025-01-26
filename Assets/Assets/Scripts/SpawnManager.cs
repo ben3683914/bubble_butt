@@ -58,7 +58,7 @@ public class SpawnManager : MonoBehaviour
             var spawn = GetRandomSpawnPoint();
             if (SpawnCheck(spawn))
             {
-                Debug.Log("spawning enemy");
+                //Debug.Log("spawning enemy");
                 Instantiate(spawnPrefab, spawn.position, Quaternion.identity);
                 return;
             }

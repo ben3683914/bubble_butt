@@ -7,6 +7,7 @@ public class BubbleBullet : MonoBehaviour
     private GameObject player;
     public float speed;
     private float lifetime;
+    public int damage;
 
     private void Awake()
     {
@@ -22,8 +23,10 @@ public class BubbleBullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.GetComponent<Player>().TakeHit();
-        Die();
+        if(collision.gameObject.TryGetComponent<Player>(out Player player)) {
+            player.TakeHit(damage);
+            Die();
+        }
     }
     
     public void Die()

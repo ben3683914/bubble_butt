@@ -37,9 +37,6 @@ namespace Assets.Assets.Scripts
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Q))
-                TakeHit();
-
             if (healthPercent < 10)
             {
                 Debug.Log($"50: {healthPercent}");
@@ -70,9 +67,12 @@ namespace Assets.Assets.Scripts
             CurrentWeapon = upgraded ? upgradedWeapon : primaryWeapon;
         }
 
-        public void TakeHit()
+        public void TakeHit(int damage)
         {
-            health--;
+            if(TryGetComponent<FlashColor>(out FlashColor flash))
+                flash.Do();
+
+            health -= damage;
 
             if (health <= 0)
                 Die();

@@ -44,6 +44,10 @@ namespace Assets.Assets.Scripts
             {
                 bullet.Die();
             }
+            else if (collision.gameObject.TryGetComponent<Boss>(out Boss boss))
+            {
+                boss.TakeHit(damage);
+            }
 
             Die();
         }

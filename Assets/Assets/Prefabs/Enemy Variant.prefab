@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &987817477107003137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4815717550275988655}
+  m_Layer: 6
+  m_Name: spawn_attack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4815717550275988655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987817477107003137}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1694460542311033110}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1376984055450247191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,11 +41,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 333241433028839681, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.28
+      value: 5.266569
       objectReference: {fileID: 0}
     - target: {fileID: 333241433028839681, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.21
+      value: 0.0013284683
       objectReference: {fileID: 0}
     - target: {fileID: 333241433028839681, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
       propertyPath: m_LocalPosition.z
@@ -61,6 +92,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1918974037830279178, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
+      propertyPath: m_Name
+      value: glare
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918974037830279178, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
@@ -75,11 +110,17 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1196730560178360953, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 333241433028839681, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4815717550275988655}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1369912136737666723, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3411772263379440464}
+    - targetCorrespondingSourceObject: {fileID: 1369912136737666723, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 272493765821234576}
   m_SourcePrefab: {fileID: 100100000, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
 --- !u!1 &8690983994889908 stripped
 GameObject:
@@ -104,3 +145,27 @@ MonoBehaviour:
   shootIntervalMinimum: 4
   shootIntervalMaximum: 10
   Health: 2
+--- !u!114 &272493765821234576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8690983994889908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 129ad3d93fbab4144a9bc507b665a8f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullets: 1
+  damage: 1
+  attackIntervalMin: 5
+  attackIntervalMax: 15
+  bulletSpawnPoint: {fileID: 4815717550275988655}
+  bulletPrefab: {fileID: 5921537086942157964, guid: 2fd1ee685bea9c1438c618d80f60e8de, type: 3}
+  currentAttackInterval: 0
+--- !u!4 &1694460542311033110 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 333241433028839681, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
+  m_PrefabInstance: {fileID: 1376984055450247191}
+  m_PrefabAsset: {fileID: 0}
