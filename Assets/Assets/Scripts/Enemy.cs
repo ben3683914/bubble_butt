@@ -7,8 +7,10 @@ public class Enemy : MonoBehaviour
     public GameObject player;
     public GameObject tinyBubble;
     public GameObject bubbleBullet;
+    public float shootIntervalMinimum;
+    public float shootIntervalMaximum;
 
-    public int Health = 10;
+    public int Health;
     private float shootInterval = 0f;
     private float shootTimer = 0f;
 
@@ -16,7 +18,7 @@ public class Enemy : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        shootInterval = Random.Range(3f, 7f);
+        shootInterval = Random.Range(shootIntervalMinimum, shootIntervalMaximum);
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(bubbleBullet, transform.position, Quaternion.identity);
             Debug.Log("shot fired");
-            shootInterval = Random.Range(2f, 7f);
+            shootInterval = Random.Range(shootIntervalMinimum, shootIntervalMaximum);
             shootTimer = 0f;
         }
     }

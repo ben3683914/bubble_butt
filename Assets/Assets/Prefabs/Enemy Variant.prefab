@@ -101,4 +101,6 @@ MonoBehaviour:
   player: {fileID: 0}
   tinyBubble: {fileID: 2071848393293025984, guid: e00764e7b9bf6544cbf4de5a3fb2bfbe, type: 3}
   bubbleBullet: {fileID: 5921537086942157964, guid: 2fd1ee685bea9c1438c618d80f60e8de, type: 3}
-  Health: 10
+  shootIntervalMinimum: 4
+  shootIntervalMaximum: 10
+  Health: 2
