@@ -32,6 +32,16 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void TakeHit(int damage)
+    {
+        Health -= damage;
+
+        if (Health <= 0)
+        {
+            Die();
+        }
+    }
+
     public void Die()
     {
         var ran = Random.Range(2, 5);

@@ -11,8 +11,16 @@ namespace Assets.Assets.Scripts
 
         public int speed = 15;
         public bool flipped;
-        public float lifetime = 2f;
         public float fireRate = 1f;
+        public int damage = 1;
+
+        private float lifetime;
+        private void Awake()
+        {
+            lifetime = Random.Range(2f, 3f);
+            StartCoroutine(DieOverTime());
+        }
+
         void Start()
         {
             rigidbody = this.GetComponent<Rigidbody2D>();
@@ -23,23 +31,32 @@ namespace Assets.Assets.Scripts
         void FixedUpdate()
         {
             rigidbody.linearVelocityX = flipped ? -speed : speed;
-            lifetime -= Time.deltaTime;
-
-            if ( lifetime < 0)
-            {
-                Die();
-            }
-
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
             Debug.Log(collision.gameObject.name);
+
+            if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemy))
+            {
+                enemy.TakeHit(damage);
+            }
+            else if (collision.gameObject.TryGetComponent<BubbleBullet>(out BubbleBullet bullet))
+            {
+                bullet.Die();
+            }
+
             Die();
         }
 
         void Die()
         {
             Destroy(gameObject);
+        }
+
+        IEnumerator DieOverTime()
+        {
+            yield return new WaitForSeconds(lifetime);
+            Die();
         }
     }
 }

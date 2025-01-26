@@ -50,13 +50,13 @@ public class Movement : MonoBehaviour
 
         transform.localScale = theScale;
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && !jumping)
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded && !jumping)
         {
             jumping = true;
             jumpTime = 0;
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) | jumpTime > buttonTime)
+        if (Input.GetKeyUp(KeyCode.W) | jumpTime > buttonTime)
         {
             jumping = false;
         }

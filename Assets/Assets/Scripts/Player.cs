@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 namespace Assets.Assets.Scripts
@@ -6,12 +7,14 @@ namespace Assets.Assets.Scripts
     public class Player : MonoBehaviour
     {
         public ParticleSystem healthFart;
+        public SpriteRenderer spriteRenderer;
         public Projectile primaryWeapon;
         public Projectile upgradedWeapon;
 
         public bool upgraded;
         public int maxHealth;
         public int health;
+        public int energyNeeded;
 
         private float attackTime = 0;
         private Projectile CurrentWeapon;
@@ -22,6 +25,7 @@ namespace Assets.Assets.Scripts
         {
             health = maxHealth;
             CurrentWeapon = primaryWeapon;
+            spriteRenderer = this.GetComponent<SpriteRenderer>();
         }
 
         // Use this for initialization
@@ -52,14 +56,16 @@ namespace Assets.Assets.Scripts
                 SetHealthColor(Color.yellow);
             }
 
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Shoot(true);
             }
-            else if (Input.GetKey(KeyCode.Return))
+            else if (Input.GetKey(KeyCode.Space))
             {
                 Shoot();
             }
+
+            ActivateUpgradeBubbles();
 
             CurrentWeapon = upgraded ? upgradedWeapon : primaryWeapon;
         }
@@ -70,6 +76,17 @@ namespace Assets.Assets.Scripts
 
             if (health <= 0)
                 Die();
+        }
+
+        private void ActivateUpgradeBubbles()
+        {
+            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, spriteRenderer.bounds.size.x * 2);
+            var upgradeBubbles = hitColliders.Select(x => x.GetComponent<UpgradeBubbles>()).Where(x => x != null && !x.seekPlayer);
+            
+            foreach (UpgradeBubbles upgradeBubble in upgradeBubbles){
+                Debug.Log(upgradeBubble.name);
+                upgradeBubble.Activate();
+            }
         }
 
         void SetHealthColor(Color color)
@@ -86,6 +103,16 @@ namespace Assets.Assets.Scripts
         public void DisableHealth()
         {
             healthFart.gameObject.SetActive(false);
+        }
+
+        public void TakeEnergy(int energy)
+        {
+            energyNeeded -= energy;
+
+            if (energyNeeded <= 0)
+            {
+                upgraded = true;
+            }
         }
 
         public void Shoot(bool shootOnce = false)

@@ -177,5 +177,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   flipped: 0
-  lifetime: 2
   fireRate: 1
+  damage: 5
