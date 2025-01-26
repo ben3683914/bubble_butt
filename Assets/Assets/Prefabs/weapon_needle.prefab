@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3972382969871877326}
   - component: {fileID: -4597275682994921184}
   m_Layer: 9
-  m_Name: needle
+  m_Name: weapon_needle
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -6,15 +6,15 @@ namespace Assets.Assets.Scripts
     public class Player : MonoBehaviour
     {
         public ParticleSystem healthFart;
-        public GameObject primaryWeapon;
-        public GameObject upgradedWeapon;
+        public Projectile primaryWeapon;
+        public Projectile upgradedWeapon;
 
         public bool upgraded;
         public int maxHealth;
         public int health;
 
         private float attackTime = 0;
-        private GameObject CurrentWeapon;
+        private Projectile CurrentWeapon;
 
         private float healthPercent { get { return ((float)health / (float)maxHealth) * 100f; } }
 
@@ -60,6 +60,8 @@ namespace Assets.Assets.Scripts
             {
                 Shoot();
             }
+
+            CurrentWeapon = upgraded ? upgradedWeapon : primaryWeapon;
         }
 
         public void TakeHit()
@@ -91,7 +93,7 @@ namespace Assets.Assets.Scripts
             if (attackTime > CurrentWeapon.GetComponent<Projectile>().fireRate || shootOnce)
             {
                 Debug.Log("shoot");
-                var clone = Instantiate(CurrentWeapon, transform.position, Quaternion.identity);
+                var clone = Instantiate(CurrentWeapon.gameObject, transform.position, Quaternion.identity);
                 clone.GetComponent<Projectile>().flipped = transform.localScale.x < 0;
                 attackTime = 0;
             }
