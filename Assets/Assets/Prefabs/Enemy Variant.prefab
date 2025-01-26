@@ -103,6 +103,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1.59
       objectReference: {fileID: 0}
+    - target: {fileID: 6432028009765606669, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6672146167090743048, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -139,11 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa9be5a15eed2a64aacea96864d254fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   tinyBubble: {fileID: 2071848393293025984, guid: e00764e7b9bf6544cbf4de5a3fb2bfbe, type: 3}
   bubbleBullet: {fileID: 5921537086942157964, guid: 2fd1ee685bea9c1438c618d80f60e8de, type: 3}
-  shootIntervalMinimum: 4
-  shootIntervalMaximum: 10
   Health: 2
 --- !u!114 &272493765821234576
 MonoBehaviour:

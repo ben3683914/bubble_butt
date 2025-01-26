@@ -8,33 +8,23 @@ namespace Assets.Assets.Scripts
     {
         public ParticleSystem healthFart;
         public SpriteRenderer spriteRenderer;
-        public Projectile primaryWeapon;
-        public Projectile upgradedWeapon;
+        public Weapon primaryWeapon;
+        public Weapon upgradedWeapon;
 
         public bool upgraded;
         public int maxHealth;
         public int health;
         public int energyNeeded;
 
-        private float attackTime = 0;
-        private Projectile CurrentWeapon;
 
         private float healthPercent { get { return ((float)health / (float)maxHealth) * 100f; } }
 
         private void Awake()
         {
             health = maxHealth;
-            CurrentWeapon = primaryWeapon;
             spriteRenderer = this.GetComponent<SpriteRenderer>();
         }
 
-        // Use this for initialization
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
         void Update()
         {
             if (healthPercent < 10)
@@ -53,23 +43,34 @@ namespace Assets.Assets.Scripts
                 SetHealthColor(Color.yellow);
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                Shoot(true);
+                primaryWeapon.Shoot(true);
             }
-            else if (Input.GetKey(KeyCode.Space))
+            else if (Input.GetKey(KeyCode.E))
             {
-                Shoot();
+                primaryWeapon.Shoot();
+            }
+
+            if (upgraded)
+            {
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    upgradedWeapon.Shoot(true);
+                }
+                else if (Input.GetKey(KeyCode.Q))
+                {
+                    upgradedWeapon.Shoot();
+                }
             }
 
             ActivateUpgradeBubbles();
 
-            CurrentWeapon = upgraded ? upgradedWeapon : primaryWeapon;
         }
 
         public void TakeHit(int damage)
         {
-            if(TryGetComponent<FlashColor>(out FlashColor flash))
+            if (TryGetComponent<FlashColor>(out FlashColor flash))
                 flash.Do();
 
             health -= damage;
@@ -82,8 +83,9 @@ namespace Assets.Assets.Scripts
         {
             Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, spriteRenderer.bounds.size.x * 2);
             var upgradeBubbles = hitColliders.Select(x => x.GetComponent<UpgradeBubbles>()).Where(x => x != null && !x.seekPlayer);
-            
-            foreach (UpgradeBubbles upgradeBubble in upgradeBubbles){
+
+            foreach (UpgradeBubbles upgradeBubble in upgradeBubbles)
+            {
                 upgradeBubble.Activate();
             }
         }
@@ -108,22 +110,14 @@ namespace Assets.Assets.Scripts
         {
             energyNeeded -= energy;
 
-            if (energyNeeded <= 0)
+            if (energyNeeded <= 0 && !upgraded)
             {
+                Debug.Log("upgrade");
                 upgraded = true;
+                GameManager.Instance.UIManager.Upgrade();
             }
         }
 
-        public void Shoot(bool shootOnce = false)
-        {
-            if (attackTime > CurrentWeapon.GetComponent<Projectile>().fireRate || shootOnce)
-            {
-                var clone = Instantiate(CurrentWeapon.gameObject, transform.position, Quaternion.identity);
-                clone.GetComponent<Projectile>().flipped = transform.localScale.x < 0;
-                attackTime = 0;
-            }
 
-            attackTime += Time.deltaTime;
-        }
     }
 }

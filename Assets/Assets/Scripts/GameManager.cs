@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public CameraManager CameraManager;
     public PlayerManager PlayerManager;
-    public AttackManager AttackManager;
+    public UIManager UIManager;
 
     private void Start()
     {

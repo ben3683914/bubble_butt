@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Assets.Scripts.Helpers;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -34,12 +35,14 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             rigidbody.linearVelocityX = -speed;
+            GameManager.Instance.PlayerManager.direction = Direction.Left;
             theScale.x = Math.Abs(transform.localScale.x) * -1;
 
         }
         else if (Input.GetKey(KeyCode.D))
         {
             rigidbody.linearVelocityX = speed;
+            GameManager.Instance.PlayerManager.direction = Direction.Right;
             theScale.x = Math.Abs(transform.localScale.x) * 1;
         }
         else

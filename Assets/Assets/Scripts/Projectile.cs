@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Assets.Scripts.Helpers;
+using System.Collections;
 using UnityEngine;
 
 namespace Assets.Assets.Scripts
@@ -10,8 +11,7 @@ namespace Assets.Assets.Scripts
 
 
         public int speed = 15;
-        public bool flipped;
-        public float fireRate = 1f;
+        public Direction direction;
         public int damage = 1;
 
         private float lifetime;
@@ -25,12 +25,12 @@ namespace Assets.Assets.Scripts
         {
             rigidbody = this.GetComponent<Rigidbody2D>();
             spriteRenderer = this.GetComponent<SpriteRenderer>();
-            spriteRenderer.flipX = flipped;
+            spriteRenderer.flipX = direction == Direction.Left;
         }
 
         void FixedUpdate()
         {
-            rigidbody.linearVelocityX = flipped ? -speed : speed;
+            rigidbody.linearVelocityX = direction == Direction.Left ? -speed : speed;
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
