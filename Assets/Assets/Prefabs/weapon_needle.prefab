@@ -178,4 +178,4 @@ MonoBehaviour:
   speed: 25
   flipped: 0
   fireRate: 1
-  damage: 5
+  damage: 3
