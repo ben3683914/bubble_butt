@@ -41,11 +41,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 333241433028839681, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.266569
+      value: -23.78
       objectReference: {fileID: 0}
     - target: {fileID: 333241433028839681, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0013284683
+      value: -9.86
       objectReference: {fileID: 0}
     - target: {fileID: 333241433028839681, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
       propertyPath: m_LocalPosition.z
@@ -125,6 +125,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1369912136737666723, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
       insertIndex: -1
       addedObject: {fileID: 272493765821234576}
+    - targetCorrespondingSourceObject: {fileID: 1369912136737666723, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8332594177266850804}
   m_SourcePrefab: {fileID: 100100000, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}
 --- !u!1 &8690983994889908 stripped
 GameObject:
@@ -146,6 +149,9 @@ MonoBehaviour:
   tinyBubble: {fileID: 2071848393293025984, guid: e00764e7b9bf6544cbf4de5a3fb2bfbe, type: 3}
   bubbleBullet: {fileID: 5921537086942157964, guid: 2fd1ee685bea9c1438c618d80f60e8de, type: 3}
   Health: 2
+  wakeSound: {fileID: 8300000, guid: 93354581161d0044eb82335f52478f87, type: 3}
+  hitSound: {fileID: 8300000, guid: db84e51facedfba4fb4a8e12e6bd7195, type: 3}
+  dieSound: {fileID: 8300000, guid: 83870680b60d3124d8d184fd6ac2c263, type: 3}
 --- !u!114 &272493765821234576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,10 +167,107 @@ MonoBehaviour:
   bullets: 1
   damage: 1
   attackIntervalMin: 5
-  attackIntervalMax: 15
+  attackIntervalMax: 10
   bulletSpawnPoint: {fileID: 4815717550275988655}
   bulletPrefab: {fileID: 5921537086942157964, guid: 2fd1ee685bea9c1438c618d80f60e8de, type: 3}
   currentAttackInterval: 0
+--- !u!82 &8332594177266850804
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8690983994889908}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1694460542311033110 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 333241433028839681, guid: 8eec0fbb07ed2794ebfe2e9b77e8c865, type: 3}

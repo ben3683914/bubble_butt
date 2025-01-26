@@ -9,10 +9,15 @@ namespace Assets.Assets.Scripts
         public float speed;
 
         public bool seekPlayer;
+        public AudioClip wakeSound;
+        public AudioClip slurpSound;
+        private AudioSource audioSource;
 
         private void Awake()
         {
             player = GameObject.Find("Player");
+            audioSource = player.GetComponent<AudioSource>();
+            audioSource.PlayOneShot(wakeSound);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -42,6 +47,7 @@ namespace Assets.Assets.Scripts
 
         public void Activate()
         {
+            audioSource.PlayOneShot(slurpSound);
             seekPlayer = true;
         }
     }

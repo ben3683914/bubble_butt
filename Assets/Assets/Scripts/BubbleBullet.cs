@@ -8,12 +8,17 @@ public class BubbleBullet : MonoBehaviour
     public float speed;
     private float lifetime;
     public int damage;
+    public AudioClip dieSound;
+    public AudioClip wakeSound;
+    private AudioSource audioSource;
 
     private void Awake()
     {
         player = GameObject.Find("Player");
-        lifetime = Random.Range(5f, 10f);
+        lifetime = Random.Range(7f, 15f);
         StartCoroutine(DieOverTime());
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(wakeSound);
     }
 
     void FixedUpdate()
@@ -31,6 +36,7 @@ public class BubbleBullet : MonoBehaviour
     
     public void Die()
     {
+        audioSource.PlayOneShot(dieSound);
         Destroy(gameObject);
     }
 

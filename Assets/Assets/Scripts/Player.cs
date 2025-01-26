@@ -1,4 +1,6 @@
-﻿using System.Collections;
+using NUnit.Framework;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -10,6 +12,8 @@ namespace Assets.Assets.Scripts
         public SpriteRenderer spriteRenderer;
         public Weapon primaryWeapon;
         public Weapon upgradedWeapon;
+        public AudioClip hitSound;
+        private AudioSource audioSource;
 
         public bool upgraded;
         public int maxHealth;
@@ -23,6 +27,7 @@ namespace Assets.Assets.Scripts
         {
             health = maxHealth;
             spriteRenderer = this.GetComponent<SpriteRenderer>();
+            audioSource = this.GetComponent<AudioSource>();
         }
 
         void Update()
@@ -70,8 +75,11 @@ namespace Assets.Assets.Scripts
 
         public void TakeHit(int damage)
         {
-            if (TryGetComponent<FlashColor>(out FlashColor flash))
+            if(TryGetComponent<FlashColor>(out FlashColor flash))
+            {
                 flash.Do();
+                audioSource.PlayOneShot(hitSound);
+            }
 
             health -= damage;
 

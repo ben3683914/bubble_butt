@@ -13,12 +13,17 @@ namespace Assets.Assets.Scripts
         public int speed = 15;
         public Direction direction;
         public int damage = 1;
+        public AudioClip wakeSound;
+        private AudioSource audioSource;
 
         private float lifetime;
         private void Awake()
         {
             lifetime = Random.Range(2f, 3f);
+            audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(wakeSound);
             StartCoroutine(DieOverTime());
+            
         }
 
         void Start()

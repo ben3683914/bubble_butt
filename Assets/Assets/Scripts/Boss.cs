@@ -5,12 +5,16 @@ public class Boss : MonoBehaviour
     public ParticleSystem healthFart;
     public int maxHealth;
     public int health;
+    public AudioClip hitSound;
+    public AudioClip dieSound;
+    private AudioSource audioSource;
 
     private float healthPercent { get { return ((float)health / (float)maxHealth) * 100f; } }
 
     private void Awake()
     {
         health = maxHealth;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -38,9 +42,13 @@ public class Boss : MonoBehaviour
             flash.Do();
 
         health -= damage;
+        audioSource.PlayOneShot(hitSound);
 
         if (health <= 0)
+        {
             Die();
+            audioSource.PlayOneShot(dieSound);
+        }
     }
 
     void SetHealthColor(Color color)
