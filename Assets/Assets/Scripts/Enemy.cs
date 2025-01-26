@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(bubbleBullet, transform.position, Quaternion.identity);
             Debug.Log("shot fired");
-            shootInterval = Random.Range(3f, 7f);
+            shootInterval = Random.Range(3f, 3f);
             shootTimer = 0f;
         }
     }
