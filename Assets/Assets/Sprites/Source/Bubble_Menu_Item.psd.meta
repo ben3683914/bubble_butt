@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 42e30f80fb5800a429322f4fb64725c0
+guid: ac9c8a0682358974091de1ff6d00d1b3
 importerOverride:
   nativeImporterType: 2089858483
   scriptedImporterType:
@@ -88,7 +88,7 @@ ScriptedImporter:
       y: 0
       width: 0
       height: 0
-    spriteID: 30fd9cf809305b04fb0cb14c00045bb1
+    spriteID: 05c54bf89fa410043b496260df763ea8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -100,7 +100,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Play
+  - name: Bubble
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -110,9 +110,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 679
-      height: 465
-    spriteID: a582ce42e78811443829efd78861846d
+      width: 303
+      height: 329
+    spriteID: 4434be9b5281d8f478db457c7ec828dd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -120,52 +120,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -852, y: -693}
-    spritePosition: {x: 856, y: 697}
-  - name: Credits
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 477
-      width: 800
-      height: 240
-    spriteID: 2871914a85fd7da418968cdf436695cb
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: -121, y: 192}
-    spritePosition: {x: 125, y: 285}
-  - name: Quit
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 725
-      width: 584
-      height: 257
-    spriteID: 4a6c4ac410ab2ff44b5cea220c83a639
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: -1322, y: 449}
-    spritePosition: {x: 1326, y: 276}
+    uvTransform: {x: 1, y: 3}
+    spritePosition: {x: 3, y: 1}
   spriteImportData: []
   rigSpriteImportData: []
   sharedRigSpriteImportData: []
@@ -205,33 +161,13 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Play
-    spriteName: Play
+  - name: Bubble
+    spriteName: Bubble
     isGroup: 0
     parentIndex: -1
-    spriteID: a582ce42e78811443829efd78861846d
-    layerID: 4
-    mosaicPosition: {x: 4, y: 4}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Credits
-    spriteName: Credits
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 2871914a85fd7da418968cdf436695cb
-    layerID: 3
-    mosaicPosition: {x: 4, y: 477}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Quit
-    spriteName: Quit
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 4a6c4ac410ab2ff44b5cea220c83a639
+    spriteID: 4434be9b5281d8f478db457c7ec828dd
     layerID: 2
-    mosaicPosition: {x: 4, y: 725}
+    mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -239,7 +175,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: fb9689f80d9ca9042961a83255f6eeb6
+    spriteID: 12bdd9eec722aa14caf21964eab57037
     layerID: 1
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
