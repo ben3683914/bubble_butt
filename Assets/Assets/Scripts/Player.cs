@@ -107,6 +107,7 @@ namespace Assets.Assets.Scripts
         private void Die()
         {
             gameObject.SetActive(false);
+            GameManager.Instance.MenuManager.GameOver();
         }
 
         public void DisableHealth()

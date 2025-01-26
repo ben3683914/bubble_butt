@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public CameraManager CameraManager;
     public PlayerManager PlayerManager;
     public UIManager UIManager;
-
+    public MenuManager MenuManager;
     private void Start()
     {
         Instance = this;

@@ -414,6 +414,7 @@ MonoBehaviour:
   CameraManager: {fileID: 1243051940}
   PlayerManager: {fileID: 2098196418}
   UIManager: {fileID: 591793997}
+  MenuManager: {fileID: 1310115655}
 --- !u!4 &122007657
 Transform:
   m_ObjectHideFlags: 0
@@ -431,6 +432,7 @@ Transform:
   - {fileID: 2098196419}
   - {fileID: 270358644}
   - {fileID: 591793996}
+  - {fileID: 1310115654}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &154107066
@@ -7968,6 +7970,51 @@ Transform:
   - {fileID: 1416493819}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1310115653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1310115654}
+  - component: {fileID: 1310115655}
+  m_Layer: 0
+  m_Name: MenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1310115654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310115653}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 122007657}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1310115655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310115653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7402ef8c9bfdb4ebd419306fed8e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Panel: {fileID: 0}
 --- !u!212 &1379155282 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: -8089108032486474258, guid: e382214cfef218e44823e46ca5741426, type: 3}
@@ -8585,6 +8632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19f77d720d87e3439c1aca17fc07f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  triggerName: levelUp
 --- !u!4 &1729432846 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2313676781472227989, guid: 4b94b5ae74266c949976b49c708e4bc2, type: 3}

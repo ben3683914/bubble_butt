@@ -60,5 +60,6 @@ public class Boss : MonoBehaviour
     private void Die()
     {
         gameObject.SetActive(false);
+        GameManager.Instance.MenuManager.Congratulations();
     }
 }

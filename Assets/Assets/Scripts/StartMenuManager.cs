@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Assets.Assets.Scripts
 {
-    public class StartMenuManager : MonoBehaviour
+    public class MenuManager : MonoBehaviour
     {
         public GameObject Panel;
 
@@ -13,6 +13,22 @@ namespace Assets.Assets.Scripts
         {
             SceneManager.LoadScene(1);
         }
+
+        public void MainMenu()
+        {
+            SceneManager.LoadScene(0);
+        }
+
+        public void GameOver()
+        {
+            SceneManager.LoadScene(2);
+        }
+
+        public void Congratulations()
+        {
+            SceneManager.LoadScene(3);
+        }
+
 
         public void OpenCredits()
         {
