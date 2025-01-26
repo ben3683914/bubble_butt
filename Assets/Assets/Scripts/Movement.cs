@@ -1,16 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    //COMPONENT REFERENCES===========
     Animator animator;
     Rigidbody2D rigidbody;
     SpriteRenderer spriteRenderer;
     BoxCollider2D collider;
 
-    //MOVEMENT VARIABLES=============
     public int speed = 5;
 
     public float buttonTime = 0.3f;
@@ -27,27 +26,29 @@ public class Movement : MonoBehaviour
 
     }
 
-    void Update()
+    private void Update()
     {
-        var velocity = 0;
+        Vector3 theScale = transform.localScale;
+
         //HORIZONTAL MOVEMENT=============
         if (Input.GetKey(KeyCode.A))
         {
-            velocity = -speed;
-            spriteRenderer.flipX = true;
+            rigidbody.linearVelocityX = -speed;
+            theScale.x = Math.Abs(transform.localScale.x) * -1;
+
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            velocity = speed;
-            spriteRenderer.flipX = false;
+            rigidbody.linearVelocityX = speed;
+            theScale.x = Math.Abs(transform.localScale.x) * 1;
         }
         else
         {
-            if (velocity != 0)
-                velocity = 0;
+            if (rigidbody.linearVelocityX != 0)
+                rigidbody.linearVelocityX = 0;
         }
 
-        rigidbody.linearVelocityX = velocity;
+        transform.localScale = theScale;
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded && !jumping)
         {
@@ -55,20 +56,27 @@ public class Movement : MonoBehaviour
             jumpTime = 0;
         }
 
-        if (jumping)
-        {
-            rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, jumpAmount * Time.deltaTime);
-            jumpTime += Time.deltaTime;
-        }
-
         if (Input.GetKeyUp(KeyCode.Space) | jumpTime > buttonTime)
         {
             jumping = false;
         }
+
+    }
+
+    void FixedUpdate()
+    {
         var hit = Physics2D.Raycast(new Vector2(transform.position.x, collider.bounds.min.y -.01f), Vector2.down, .1f);
+        
+
+        if (jumping)
+        {
+            rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, jumpAmount);
+            jumpTime += Time.deltaTime;
+        }
+
+        
         if (hit)
         {
-            //Debug.Log($"{hit.collider.gameObject.name}:{collider.bounds.ToString()}:{collider.bounds.min.ToString()}");
             isGrounded = true;
         }
         else

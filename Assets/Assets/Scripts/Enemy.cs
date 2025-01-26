@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public GameObject tinyBubble;
     public GameObject bubbleBullet;
 
+    public int Health = 10;
     private float shootInterval = 0f;
     private float shootTimer = 0f;
 
