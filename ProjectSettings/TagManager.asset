@@ -42,5 +42,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Platforms
+    uniqueID: 1934468265
+    locked: 0
+  - name: Bubbles
+    uniqueID: 3148102113
+    locked: 0
+  - name: Projectiles
+    uniqueID: 1052464755
+    locked: 0
+  - name: Characters
+    uniqueID: 597280807
+    locked: 0
   m_RenderingLayers:
   - Default
