@@ -1,14 +1,18 @@
 using UnityEngine;
 using Assets.Assets.Scripts;
+using System.Collections;
 
 public class BubbleBullet : MonoBehaviour
 {
     private GameObject player;
     public float speed;
+    private float lifetime;
 
     private void Awake()
     {
         player = GameObject.Find("Player");
+        lifetime = Random.Range(5f, 10f);
+        StartCoroutine(DieOverTime());
     }
 
     void FixedUpdate()
@@ -25,5 +29,11 @@ public class BubbleBullet : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+    }
+
+    IEnumerator DieOverTime()
+    {
+        yield return new WaitForSeconds(lifetime);
+        Die();
     }
 }

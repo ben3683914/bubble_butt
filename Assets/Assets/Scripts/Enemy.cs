@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -26,7 +27,7 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(bubbleBullet, transform.position, Quaternion.identity);
             Debug.Log("shot fired");
-            shootInterval = Random.Range(3f, 3f);
+            shootInterval = Random.Range(2f, 7f);
             shootTimer = 0f;
         }
     }
