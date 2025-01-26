@@ -88,7 +88,7 @@ ScriptedImporter:
       y: 0
       width: 0
       height: 0
-    spriteID: daca49e8df30bed40a1a3d1fc4507d58
+    spriteID: 53add1bd97964e9458cf27900616aeac
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -109,10 +109,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 755
+      y: 730
       width: 715
       height: 572
-    spriteID: 24ce957efcf9b2f4198871733445cfb1
+    spriteID: 23c879b8b28717b409e2243b3e3afc0f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -120,8 +120,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -401, y: 315}
-    spritePosition: {x: 405, y: 440}
+    uvTransform: {x: -429, y: 317}
+    spritePosition: {x: 433, y: 413}
   - name: Mouth
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -131,10 +131,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 1335
+      y: 1310
       width: 223
       height: 92
-    spriteID: 410d140c86809c8498225271f4f5508d
+    spriteID: f3569a55d37019248b761b86351de6c3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,8 +142,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -862, y: 723}
-    spritePosition: {x: 866, y: 612}
+    uvTransform: {x: -890, y: 725}
+    spritePosition: {x: 894, y: 585}
   - name: Body
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -154,9 +154,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 895
-      height: 743
-    spriteID: 77848b5814b4c6b45b96e9ef1e4dc5a8
+      width: 904
+      height: 718
+    spriteID: d50bfe7eefaf442408237638aea3d5d9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -164,8 +164,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -7, y: 2}
-    spritePosition: {x: 11, y: 2}
+    uvTransform: {x: -35, y: 4}
+    spritePosition: {x: 39, y: 0}
   spriteImportData: []
   rigSpriteImportData: []
   sharedRigSpriteImportData: []
@@ -209,9 +209,9 @@ ScriptedImporter:
     spriteName: Head
     isGroup: 0
     parentIndex: -1
-    spriteID: 24ce957efcf9b2f4198871733445cfb1
+    spriteID: 23c879b8b28717b409e2243b3e3afc0f
     layerID: 4
-    mosaicPosition: {x: 4, y: 755}
+    mosaicPosition: {x: 4, y: 730}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -219,9 +219,9 @@ ScriptedImporter:
     spriteName: Mouth
     isGroup: 0
     parentIndex: -1
-    spriteID: 410d140c86809c8498225271f4f5508d
+    spriteID: f3569a55d37019248b761b86351de6c3
     layerID: 3
-    mosaicPosition: {x: 4, y: 1335}
+    mosaicPosition: {x: 4, y: 1310}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -229,7 +229,7 @@ ScriptedImporter:
     spriteName: Body
     isGroup: 0
     parentIndex: -1
-    spriteID: 77848b5814b4c6b45b96e9ef1e4dc5a8
+    spriteID: d50bfe7eefaf442408237638aea3d5d9
     layerID: 2
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -239,7 +239,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: f6ce2f97c41424f46a6f62bab961e281
+    spriteID: 3f31fb3b88075484cb4c4c06c069c420
     layerID: 1
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
