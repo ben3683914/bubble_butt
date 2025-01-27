@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
+  lifetime: 10
   damage: 0
   dieSound: {fileID: 8300000, guid: aab859d18cb42b44eb163bd8a32ddfeb, type: 3}
   wakeSound: {fileID: 8300000, guid: d5748750db7fdce4f9128e36d8a75271, type: 3}

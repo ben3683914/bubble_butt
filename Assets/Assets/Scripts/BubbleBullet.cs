@@ -6,7 +6,7 @@ public class BubbleBullet : MonoBehaviour
 {
     private GameObject player;
     public float speed;
-    private float lifetime;
+    public float lifetime;
     public int damage;
     public AudioClip dieSound;
     public AudioClip wakeSound;
@@ -15,7 +15,7 @@ public class BubbleBullet : MonoBehaviour
     private void Awake()
     {
         player = GameObject.Find("Player");
-        lifetime = Random.Range(7f, 15f);
+        lifetime = Random.Range(lifetime - (lifetime/3), lifetime+(lifetime/3));
         StartCoroutine(DieOverTime());
         audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(wakeSound);
